@@ -30,10 +30,10 @@ export const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, t
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-xl w-96 p-6">
-        <h3 className="text-lg font-bold mb-4">{task ? 'Edit Task' : 'New Task'}</h3>
+        <h3 className="text-lg font-bold mb-4">{task ? '编辑任务' : '新建任务'}</h3>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Name</label>
+            <label className="block text-sm font-medium text-gray-700">任务名称</label>
             <input
               type="text"
               value={formData.name || ''}
@@ -45,7 +45,7 @@ export const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, t
           
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700">Start Date</label>
+              <label className="block text-sm font-medium text-gray-700">开始日期</label>
               <input
                 type="date"
                 value={formData.startDate || ''}
@@ -55,7 +55,7 @@ export const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, t
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700">End Date</label>
+              <label className="block text-sm font-medium text-gray-700">结束日期</label>
               <input
                 type="date"
                 value={formData.endDate || ''}
@@ -67,7 +67,7 @@ export const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, t
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Progress (%)</label>
+            <label className="block text-sm font-medium text-gray-700">进度 (%)</label>
             <input
               type="number"
               min="0"
@@ -79,15 +79,15 @@ export const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, t
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Type</label>
+            <label className="block text-sm font-medium text-gray-700">类型</label>
             <select
               value={formData.type || 'task'}
               onChange={(e) => setFormData({ ...formData, type: e.target.value as any })}
               className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 border p-2"
             >
-              <option value="task">Task</option>
-              <option value="milestone">Milestone</option>
-              <option value="group">Group</option>
+              <option value="task">普通任务</option>
+              <option value="milestone">里程碑</option>
+              <option value="group">任务组</option>
             </select>
           </div>
 
@@ -97,13 +97,13 @@ export const TaskModal: React.FC<TaskModalProps> = ({ isOpen, onClose, onSave, t
               onClick={onClose}
               className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-md"
             >
-              Cancel
+              取消
             </button>
             <button
               type="submit"
               className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md"
             >
-              Save
+              保存
             </button>
           </div>
         </form>

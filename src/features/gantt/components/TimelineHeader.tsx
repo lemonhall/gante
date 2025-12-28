@@ -19,7 +19,7 @@ export const TimelineHeader: React.FC<TimelineHeaderProps> = ({ startDate, endDa
           style={{ width: columnWidth }}
         >
           <span className="font-semibold">{day.getDate()}</span>
-          <span className="text-[10px]">{day.toLocaleDateString('en-US', { weekday: 'narrow' })}</span>
+          <span className="text-[10px]">{day.toLocaleDateString('zh-CN', { weekday: 'narrow' })}</span>
         </div>
       ))}
     </div>

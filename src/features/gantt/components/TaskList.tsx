@@ -11,7 +11,7 @@ export const TaskList: React.FC<TaskListProps> = ({ tasks, rowHeight, onContextM
   return (
     <div className="border-r border-gray-200 bg-white flex-shrink-0 w-64 overflow-hidden flex flex-col">
       <div className="h-10 border-b border-gray-200 bg-gray-50 font-semibold text-xs text-gray-500 flex items-center px-4">
-        Task Name
+        任务名称
       </div>
       <div className="flex-1 overflow-hidden">
         {tasks.map((task) => (

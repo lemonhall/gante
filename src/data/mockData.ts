@@ -12,7 +12,7 @@ const startDate = today.toISOString().split('T')[0];
 export const mockTasks: Task[] = [
   {
     id: '1',
-    name: 'Project Planning',
+    name: '项目规划',
     type: 'group',
     startDate: startDate,
     endDate: addDays(today, 10),
@@ -21,7 +21,7 @@ export const mockTasks: Task[] = [
   {
     id: '1-1',
     parentId: '1',
-    name: 'Requirements Analysis',
+    name: '需求分析',
     type: 'task',
     startDate: startDate,
     endDate: addDays(today, 3),
@@ -30,7 +30,7 @@ export const mockTasks: Task[] = [
   {
     id: '1-2',
     parentId: '1',
-    name: 'Design Phase',
+    name: '设计阶段',
     type: 'task',
     startDate: addDays(today, 3),
     endDate: addDays(today, 7),
@@ -40,7 +40,7 @@ export const mockTasks: Task[] = [
   {
     id: '1-3',
     parentId: '1',
-    name: 'Milestone: Design Approved',
+    name: '里程碑: 设计确认',
     type: 'milestone',
     startDate: addDays(today, 7),
     endDate: addDays(today, 7),
@@ -49,7 +49,7 @@ export const mockTasks: Task[] = [
   },
   {
     id: '2',
-    name: 'Development',
+    name: '开发阶段',
     type: 'group',
     startDate: addDays(today, 8),
     endDate: addDays(today, 20),
@@ -58,7 +58,7 @@ export const mockTasks: Task[] = [
   {
     id: '2-1',
     parentId: '2',
-    name: 'Frontend Implementation',
+    name: '前端实现',
     type: 'task',
     startDate: addDays(today, 8),
     endDate: addDays(today, 15),
@@ -68,7 +68,7 @@ export const mockTasks: Task[] = [
   {
     id: '2-2',
     parentId: '2',
-    name: 'Backend API',
+    name: '后端 API',
     type: 'task',
     startDate: addDays(today, 8),
     endDate: addDays(today, 18),
@@ -78,7 +78,7 @@ export const mockTasks: Task[] = [
   {
     id: '2-3',
     parentId: '2',
-    name: 'Integration Testing',
+    name: '集成测试',
     type: 'task',
     startDate: addDays(today, 15),
     endDate: addDays(today, 20),
@@ -89,6 +89,6 @@ export const mockTasks: Task[] = [
 
 export const mockProject: Project = {
   id: 'p1',
-  name: 'Website Redesign',
+  name: '网站重构',
   tasks: mockTasks,
 };

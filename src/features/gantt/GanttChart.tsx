@@ -56,7 +56,7 @@ export const GanttChart: React.FC = () => {
       const newSubtask: Task = {
         id: `sub-${Date.now()}`,
         parentId: parentTask.id,
-        name: 'New Subtask',
+        name: '新子任务',
         type: 'task',
         startDate: parentTask.startDate,
         endDate: parentTask.endDate,
@@ -110,15 +110,15 @@ export const GanttChart: React.FC = () => {
   return (
     <div className="flex flex-col h-full bg-white rounded-lg shadow-lg overflow-hidden relative">
       <div className="p-4 border-b border-gray-200 flex justify-between items-center bg-gray-50">
-        <h2 className="text-lg font-bold text-gray-800">Project Timeline</h2>
+        <h2 className="text-lg font-bold text-gray-800">项目进度</h2>
         <div className="space-x-2">
-            <button className="px-3 py-1 bg-white border border-gray-300 rounded text-sm hover:bg-gray-50">Day</button>
-            <button className="px-3 py-1 bg-white border border-gray-300 rounded text-sm hover:bg-gray-50">Week</button>
+            <button className="px-3 py-1 bg-white border border-gray-300 rounded text-sm hover:bg-gray-50">日</button>
+            <button className="px-3 py-1 bg-white border border-gray-300 rounded text-sm hover:bg-gray-50">周</button>
             <button 
               onClick={handleAddTask}
               className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700"
             >
-              Add Task
+              添加任务
             </button>
         </div>
       </div>
@@ -170,9 +170,9 @@ export const GanttChart: React.FC = () => {
           y={contextMenu.y}
           onClose={handleCloseContextMenu}
           options={[
-            { label: 'Edit Task', onClick: handleEditTask },
-            { label: 'Add Subtask', onClick: handleAddSubtask },
-            { label: 'Delete Task', onClick: handleDeleteTask, className: 'text-red-600' },
+            { label: '编辑任务', onClick: handleEditTask },
+            { label: '添加子任务', onClick: handleAddSubtask },
+            { label: '删除任务', onClick: handleDeleteTask, className: 'text-red-600' },
           ]}
         />
       )}

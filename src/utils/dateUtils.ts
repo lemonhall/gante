@@ -4,7 +4,7 @@ export const getDaysInMonth = (year: number, month: number) => {
 
 export const formatDate = (dateString: string) => {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  return date.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' });
 };
 
 export const getDaysRange = (startDate: string, endDate: string) => {
